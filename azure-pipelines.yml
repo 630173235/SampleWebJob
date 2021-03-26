@@ -32,8 +32,8 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
-    publishWebProjects: true
-    zipAfterPublish: true
+    publishWebProjects: false
+    zipAfterPublish: false
     modifyOutputPath: false
 - task: PublishBuildArtifacts@1
   inputs:
