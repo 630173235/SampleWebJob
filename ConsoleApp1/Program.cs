@@ -12,7 +12,7 @@ namespace MySampleWebJob
 	{
 		static void Main(string[] args)
 		{
-			var connectionString = "Data Source=192.168.10.163,60258;Initial Catalog=SampleDB;User ID=sa;Pwd=zx883408";
+			var connectionString = "Data Source=DESKTOP-51DKBNV,60258;Initial Catalog=SampleDB;User ID=sa;Pwd=zx883408";
 			//var connectionString = ConfigurationManager.ConnectionStrings["MyConnection"].ConnectionString;
 			SqlConnection myConnection = new SqlConnection(connectionString);
 				string commandTxt = "select * from TestTable";
@@ -22,7 +22,7 @@ namespace MySampleWebJob
 				{
 					while (dataReader.Read() )
 					{
-						Console.WriteLine( dataReader["id"].ToString() + " " + dataReader["data"].ToString());
+						Console.WriteLine( dataReader["id"].ToString() + "    " + dataReader["data"].ToString());
 					}
 					myConnection.Close();
 				}
