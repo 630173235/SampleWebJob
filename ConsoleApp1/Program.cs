@@ -22,7 +22,7 @@ namespace MySampleWebJob
 				{
 					while (dataReader.Read() )
 					{
-						Console.WriteLine( dataReader["id"].ToString() + "    " + dataReader["data"].ToString());
+						Console.WriteLine( "id = " + dataReader["id"].ToString() + ",data = " + dataReader["data"].ToString());
 					}
 					myConnection.Close();
 				}
